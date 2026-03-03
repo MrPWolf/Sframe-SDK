@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="sframe-logo.svg" width="200" alt="Sframe Logo">
+</p>
+
 # Sframe Sidecar SDK
 
 **Sframe** is a framework-agnostic "Negative Code" environment wrapper. It acts as a "Glass Box" that sits over a host web application, handicapping features and overriding API routes for showcase or demo purposes **without modifying the host's source code**.

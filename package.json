@@ -10,7 +10,8 @@
     "bin",
     "src/templates",
     "schema.json",
-    "index.js"
+    "index.js",
+    "sframe-logo.svg"
   ],
   "scripts": {
     "lint": "node ./bin/linter.js"

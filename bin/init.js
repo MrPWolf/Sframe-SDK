@@ -13,7 +13,15 @@ const rl = readline.createInterface({
 const question = (query) => new Promise((resolve) => rl.question(query, resolve));
 
 async function init() {
-    console.log('\x1b[36m%s\x1b[0m', '🚀 Initializing Sframe Sidecar SDK...');
+    console.log('\x1b[35m%s\x1b[0m', `
+   _____  ______ _____              __   __ ______ 
+  / ____||  ____|  __ \\    /\\    |  \\/  |  ____|
+ | (___  | |__  | |__) |   /  \\   | \\  / | |__   
+  \\___\\| |__| |  ___/   / /\\\\  | |\\/| |  __|  
+  ____) || |    | | \\\  / ____ \\ | |   | | |____ 
+ |_____/ |_|    |_|  \\\/_/      \\|_|   |_|______|
+    `);
+    console.log('\x1b[36m%s\x1b[0m', ' 🚀 Initializing Sframe Sidecar SDK...');
 
     const targetDir = process.cwd();
     const sframeDir = path.join(targetDir, 'sframe');
