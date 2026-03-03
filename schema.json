@@ -1,0 +1,85 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Sframe Manifest",
+    "description": "Schema for the Sframe manifest.json, defining choke rules for host web applications.",
+    "type": "object",
+    "properties": {
+        "liveDomain": {
+            "type": "string",
+            "description": "The production/live domain where the public version of the app resides. Used to distinguish from the showcase environment."
+        },
+        "sandboxPortOffset": {
+            "type": "integer",
+            "description": "The port offset for local demo runs (e.g., 1 to run on 3001 if dev is 3000).",
+            "default": 1
+        },
+        "hiddenSelectors": {
+            "type": "array",
+            "description": "CSS selectors for elements that should be deleted from the DOM in real-time.",
+            "items": {
+                "type": "string"
+            }
+        },
+        "blockedMethods": {
+            "type": "array",
+            "description": "HTTP methods that the Service Worker should intercept and block (e.g., POST, PUT, DELETE).",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "PATCH"
+                ]
+            }
+        },
+        "routeOverrides": {
+            "type": "array",
+            "description": "API route matchers to return mock data instead of letting the request reach the host server.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "urlPattern": {
+                        "type": "string",
+                        "description": "String or regex pattern to match against the request URL."
+                    },
+                    "method": {
+                        "type": "string",
+                        "description": "The HTTP method to override. If omitted, applies to all methods.",
+                        "enum": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "DELETE",
+                            "PATCH",
+                            "OPTIONS",
+                            "HEAD"
+                        ]
+                    },
+                    "status": {
+                        "type": "integer",
+                        "description": "The HTTP status code to return (e.g., 200, 403, 500).",
+                        "default": 200
+                    },
+                    "responseBody": {
+                        "type": [
+                            "object",
+                            "string"
+                        ],
+                        "description": "The mock JSON object or text string to return as the response body."
+                    }
+                },
+                "required": [
+                    "urlPattern"
+                ]
+            }
+        }
+    },
+    "required": [
+        "liveDomain",
+        "hiddenSelectors",
+        "blockedMethods",
+        "routeOverrides"
+    ],
+    "additionalProperties": false
+}

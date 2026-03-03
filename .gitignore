@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+.npm
+./sframe/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sframe Local Testing
+sw.js
+manifest.json
+loader.js
+demo.js

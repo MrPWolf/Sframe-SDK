@@ -1,0 +1,35 @@
+{
+  "name": "sframe-sdk",
+  "version": "1.0.0",
+  "description": "Framework-agnostic Negative Code wrapper that handicaps a host web application for showcase purposes.",
+  "main": "index.js",
+  "bin": {
+    "sframe-sdk": "bin/init.js"
+  },
+  "files": [
+    "bin",
+    "src/templates",
+    "schema.json",
+    "index.js"
+  ],
+  "scripts": {
+    "lint": "node ./bin/linter.js"
+  },
+  "keywords": [
+    "sidecar",
+    "glass-box",
+    "manifest",
+    "interceptor",
+    "demo"
+  ],
+  "author": "Sframe.app",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrPWolf/Sframe-SDK.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MrPWolf/Sframe-SDK/issues"
+  },
+  "homepage": "https://sframe.app"
+}
