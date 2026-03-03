@@ -11,7 +11,8 @@
     "src/templates",
     "schema.json",
     "index.js",
-    "sframe-logo.svg"
+    "sframe-logo.svg",
+    "sframe-logo-wide.svg"
   ],
   "scripts": {
     "lint": "node ./bin/linter.js"
