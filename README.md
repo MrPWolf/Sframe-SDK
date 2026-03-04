@@ -117,7 +117,7 @@ If `serviceWorkerRegistered` is `false`, ensure that `./sw.js` is being served c
 For new host projects, Sframe can be initiated by running the CLI installer:
 
 ```bash
-npx sframe-sdk
+npm i sframe-sdk
 ```
 
 This will:
